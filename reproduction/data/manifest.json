@@ -27,14 +27,14 @@
           "sha256": "ad5d09be4ca799a83edad3f993891edd7a5a930657372b9a6490d8ab4191889b"
         }
       ],
-      "description": "CAPTure sequence-level evaluation inputs.",
+      "description": "CAPture sequence-level evaluation inputs.",
       "members": 2
     },
     "caldera_csv_full": {
       "release_status": "external-download-url-pending",
       "archive_sha256": "a03422cff58b4d412efdc5030bc356606a8973a478c89e2d6459517752708337",
       "archive_bytes": 26266501260,
-      "extracted_bytes": 882870912778,
+      "extracted_size_gib": 822.44,
       "parts": [],
       "description": "Complete 499-file CALDERA-Procmon CSV snapshot. The external download URL will be added separately.",
       "members": 500
