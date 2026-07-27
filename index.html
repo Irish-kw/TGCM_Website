@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TGCM and CAPTure: a research project and controlled CALDERA–Procmon audit-log dataset for mixed-intrusion analysis.">
+  <meta name="description" content="TGCM and CAPTure: topic-guided disentanglement of interleaved APT technique sequences and a controlled CALDERA–Procmon audit-log dataset.">
   <meta name="theme-color" content="#07111f">
   <title>TGCM | CAPTure Dataset</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="citation.css">
   <script defer src="app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <a class="brand" href="#top" aria-label="TGCM home">
       <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -21,8 +21,8 @@
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       <a href="#overview">Paper</a>
       <a href="#dataset">Dataset</a>
-      <a href="#downloads">Downloads</a>
-      <a href="#roadmap">Releases</a>
+      <a href="dataset/">Dataset details</a>
+      <a href="reproduction/">Reproduction</a>
       <a href="#citation">Citation</a>
     </nav>
   </header>
@@ -31,13 +31,13 @@
     <section id="top" class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> Research website preview</p>
+          <p class="eyebrow"><span class="status-dot"></span> TGCM research project</p>
           <h1>TGCM</h1>
           <p class="hero-title">Topic-Guided Consistency Modeling for One-Step Disentanglement of Interleaved APT Technique Sequences</p>
-          <p class="hero-note">The current release focuses on the CAPTure dataset. TGCM models, source code, and reproduction materials will be released soon.</p>
+          <p class="hero-note">TGCM addresses unknown-K disentanglement of interleaved APT technique sequences. This website provides the paper, CAPTure dataset documentation, and reproduction materials.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#overview">Read the paper overview</a>
-            <a class="button button-secondary" href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">View on arXiv</a>
+            <a class="button button-primary" href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">Read the paper</a>
+            <a class="button button-secondary" href="#dataset">Explore CAPTure</a>
           </div>
         </div>
 
@@ -71,34 +71,20 @@
         <h2>Recovering latent APT campaigns from interleaved technique sequences</h2>
         <p>Enterprise audit logs may contain multiple APT campaigns unfolding at the same time. Their techniques become interleaved across actors, hosts, and execution stages, making it difficult to determine which techniques belong to the same underlying campaign.</p>
         <p>TGCM formulates this setting as the <strong>Unknown-K Interleaved Sequence Demixing</strong> problem: jointly infer the number of latent campaigns and assign each observed technique to a coherent campaign sequence.</p>
-        <p><strong>Guo-Wei Wong, Ming-Chuan Yang, Shou-De Lin, Wang-Chien Lee, and MengChang Chen.</strong> Submitted to arXiv on June 17, 2026.</p>
+        <p><strong>Guo-Wei Wong, Ming-Chuan Yang, Shou-De Lin, Wang-Chien Lee, and MengChang Chen.</strong></p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">Read on arXiv</a>
           <a href="https://arxiv.org/pdf/2606.18651" target="_blank" rel="noopener">Download PDF</a>
         </div>
       </div>
-
       <div class="feature-grid">
-        <article>
-          <span>01</span>
-          <h3>Unknown-K demixing</h3>
-          <p>TGCM recovers multiple latent campaign sequences while simultaneously estimating how many campaigns are present, rather than assuming that the episode count is known in advance.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>One-step generation</h3>
-          <p>A consistency-model-based generator learns a direct inverse mapping from an interleaved observation to separated campaign sequences in a single inference step.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Topic-guided coherence</h3>
-          <p>A topic prior derived from MITRE ATT&amp;CK narratives provides high-level tactical guidance, encouraging each recovered sequence to form a semantically coherent attack chain.</p>
-        </article>
+        <article><span>01</span><h3>Unknown-K demixing</h3><p>TGCM recovers multiple latent campaign sequences while simultaneously estimating how many campaigns are present.</p></article>
+        <article><span>02</span><h3>One-step generation</h3><p>A consistency-model-based generator learns a direct inverse mapping from an interleaved observation to separated campaign sequences.</p></article>
+        <article><span>03</span><h3>Topic-guided coherence</h3><p>A topic prior derived from MITRE ATT&amp;CK narratives encourages each recovered sequence to form a coherent attack chain.</p></article>
       </div>
-
       <div class="integrity-callout">
-        <div><span>Evaluation</span><h3>Designed for heavy interleaving and shared techniques.</h3></div>
-        <p>The paper evaluates TGCM on synthetic and established mixed-sequence datasets, DARPA TC-E3 and TC-E5 traces, and 15 representative baselines spanning statistical, deep-learning, and LLM-based methods. It also reports zero-shot evaluation on naturally interleaved DARPA TC-E5 data without retraining.</p>
+        <div><span>Reproduction</span><h3>Paper-numbered notebooks and evaluation instructions.</h3></div>
+        <p>The artifact covers the blind unknown-K comparison, zero-shot evaluation, DARPA robustness, CAPTure evaluation, unknown-K sensitivity, and topic-encoder sensitivity.</p>
       </div>
     </section>
 
@@ -106,7 +92,7 @@
       <div class="section-heading">
         <p class="eyebrow">CAPTure dataset</p>
         <h2>Controlled CALDERA–Procmon audit data</h2>
-        <p>CAPTure contains controlled adversary-emulation scenarios with high-volume Windows audit collection. It covers single-host and multi-host settings and supports research on event extraction, technique sequencing, mixed-intrusion analysis, and episode disentanglement.</p>
+        <p>CAPTure contains controlled adversary-emulation scenarios with high-volume Windows audit collection. It covers single-host and multi-host settings and supports event extraction, technique sequencing, mixed-intrusion analysis, and episode disentanglement.</p>
       </div>
       <div class="stats-grid">
         <article><strong>200</strong><span>emulation scenarios</span></article>
@@ -116,53 +102,56 @@
         <article><strong>499</strong><span>source CSV files</span></article>
         <article><strong>25</strong><span>APT and ransomware profiles</span></article>
       </div>
-      <div class="pipeline" role="list" aria-label="CAPTure data layers">
-        <article role="listitem"><span>Layer 1</span><h3>CALDERA scenarios</h3><p>Controlled attack profiles, scenario configurations, and ground-truth context.</p></article>
+      <div class="pipeline" role="list" aria-label="CAPTure data settings">
+        <article role="listitem"><span>100 scenarios</span><h3>Single-host</h3><p>Twenty scenarios for each mixture level from Mix-2 through Mix-6.</p></article>
+        <div class="pipeline-arrow" aria-hidden="true">+</div>
+        <article role="listitem"><span>100 scenarios</span><h3>Multi-host</h3><p>Twenty scenarios for each mixture level, with host traces merged by recorded timestamps.</p></article>
         <div class="pipeline-arrow" aria-hidden="true">→</div>
-        <article role="listitem"><span>Layer 2</span><h3>Procmon events</h3><p>Windows audit records collected in single-host and multi-host environments.</p></article>
-        <div class="pipeline-arrow" aria-hidden="true">→</div>
-        <article role="listitem"><span>Layer 3</span><h3>Sequence inputs</h3><p>Compact records used for mixed-episode evaluation across upstream extractors.</p></article>
+        <article role="listitem"><span>Appendix statistics</span><h3>Per-setting details</h3><p>Event volume, storage size, benign and malicious counts, and malicious ratios.</p></article>
       </div>
+      <div class="hero-actions"><a class="button button-primary" href="dataset/">View dataset details</a></div>
     </section>
 
     <section id="downloads" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Downloads</p>
-        <h2>Release status</h2>
-        <p>The website and integrity manifest are available first. CAPTure dataset downloads will be added here as each release package is ready.</p>
+        <p class="eyebrow">Dataset download</p>
+        <h2>Complete CAPTure CSV archive</h2>
+        <p>The full 499-file CALDERA–Procmon snapshot expands to approximately 822.44 GiB. The public download URL will be added here after external hosting is finalized.</p>
       </div>
       <div class="download-grid">
-        <article class="download-card available"><div class="download-status">Available</div><h3>Release manifest</h3><p>Machine-readable dataset scope, archive sizes, checksums, and release status.</p><dl><div><dt>Format</dt><dd>JSON</dd></div><div><dt>Access</dt><dd>Public</dd></div></dl><a class="button button-primary" href="release-manifest.json" download>Download manifest</a></article>
-        <article class="download-card"><div class="download-status">Coming soon</div><h3>CAPTure evaluation sequences</h3><p>Compact sequence-level inputs for CAPTure evaluation.</p><dl><div><dt>Archive</dt><dd>28,872 bytes</dd></div><div><dt>Integrity</dt><dd>SHA-256 recorded</dd></div></dl><button class="button button-disabled" type="button" disabled>Download coming soon</button></article>
-        <article class="download-card"><div class="download-status">Coming soon</div><h3>Full CALDERA–Procmon snapshot</h3><p>Complete 499-file audit-log provenance snapshot.</p><dl><div><dt>Compressed</dt><dd>26.27 GB</dd></div><div><dt>Extracted</dt><dd>822.44 GiB</dd></div></dl><button class="button button-disabled" type="button" disabled>Download coming soon</button></article>
+        <article class="download-card">
+          <div class="download-status">Download link pending</div><h3>Full CALDERA–Procmon CSV dataset</h3><p>Complete single-host and multi-host CAPTure audit-log collection.</p>
+          <dl><div><dt>Source files</dt><dd>499 CSV files</dd></div><div><dt>Extracted size</dt><dd>822.44 GiB</dd></div></dl>
+          <button class="button button-disabled" type="button" disabled>Download URL will be added</button>
+        </article>
+        <article class="download-card available">
+          <div class="download-status">Available</div><h3>Dataset documentation</h3><p>Single-host and multi-host Mix-2 through Mix-6 details corresponding to the paper appendix.</p>
+          <dl><div><dt>Scenarios</dt><dd>200</dd></div><div><dt>Mixture levels</dt><dd>2–6</dd></div></dl>
+          <a class="button button-primary" href="dataset/">View details</a>
+        </article>
+        <article class="download-card available">
+          <div class="download-status">Available</div><h3>Reproduction materials</h3><p>Experiment guides, environment definitions, metadata, and paper-numbered notebooks.</p>
+          <dl><div><dt>Experiments</dt><dd>7 groups</dd></div><div><dt>Format</dt><dd>Jupyter / Python</dd></div></dl>
+          <a class="button button-primary" href="reproduction/">Open reproduction</a>
+        </article>
       </div>
-      <div class="integrity-callout"><div><span>Integrity</span><h3>Every released artifact will be checksum verified.</h3></div><p>The release manifest records archive hashes, split-part metadata, source-file counts, and extraction requirements.</p></div>
     </section>
 
     <section id="roadmap" class="section section-roadmap">
-      <div class="section-heading">
-        <p class="eyebrow">Upcoming releases</p>
-        <h2>More materials will be released soon</h2>
-        <p>The website structure already reserves sections for the complete TGCM research artifact.</p>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Additional releases</p><h2>More TGCM materials will be released soon</h2></div>
       <div class="roadmap-grid">
-        <article><span>Coming soon</span><h3>SFM outputs</h3><p>Processed CAPTure inputs and extraction metadata produced by SFM.</p></article>
-        <article><span>Coming soon</span><h3>Zoomer outputs</h3><p>Processed CAPTure inputs and extraction metadata produced by Zoomer.</p></article>
-        <article><span>Coming soon</span><h3>TREC outputs</h3><p>Processed CAPTure inputs and extraction metadata produced by TREC.</p></article>
-        <article><span>Coming soon</span><h3>Reproduction</h3><p>Environment definitions, notebooks, expected outputs, and verification instructions.</p></article>
-        <article><span>Coming soon</span><h3>TGCM models</h3><p>Model checkpoints and documented interfaces for research evaluation.</p></article>
-        <article><span>Coming soon</span><h3>Source code</h3><p>TGCM inference, evaluation, and supporting implementation.</p></article>
+        <article><span>Coming soon</span><h3>SFM outputs</h3><p>Processed CAPTure inputs produced by SFM.</p></article>
+        <article><span>Coming soon</span><h3>Zoomer outputs</h3><p>Processed CAPTure inputs produced by Zoomer.</p></article>
+        <article><span>Coming soon</span><h3>TREC outputs</h3><p>Processed CAPTure inputs produced by TREC.</p></article>
+        <article><span>Available</span><h3>Reproduction guide</h3><p>Paper-to-artifact mapping and experiment notebooks.</p></article>
+        <article><span>Coming soon</span><h3>TGCM models</h3><p>Model checkpoints and documented inference interfaces.</p></article>
+        <article><span>Coming soon</span><h3>Source code</h3><p>Complete TGCM training and implementation release.</p></article>
       </div>
     </section>
 
     <section id="citation" class="section section-citation">
       <div class="citation-card citation-card-wide">
-        <div class="citation-heading">
-          <p class="eyebrow">Citation and license</p>
-          <h2>Cite TGCM</h2>
-          <p>Use the following BibTeX entry to cite the TGCM paper.</p>
-          <a href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">arXiv:2606.18651</a>
-        </div>
+        <div class="citation-heading"><p class="eyebrow">Citation</p><h2>Cite TGCM</h2><p>Use the following BibTeX entry to cite the TGCM paper.</p><a href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">arXiv:2606.18651</a></div>
         <div class="bibtex-panel">
           <button class="copy-button" type="button" data-copy-target="tgcm-bibtex">Copy BibTeX</button>
           <pre id="tgcm-bibtex"><code>@misc{wong2026tgcmtopicguidedgenerativedisentanglement,
@@ -178,7 +167,6 @@
       </div>
     </section>
   </main>
-
-  <footer class="site-footer"><div><strong>TGCM and CAPTure</strong><p>Research on interleaved APT technique sequences and controlled audit-log evaluation.</p></div><p>Additional datasets, models, code, and reproduction materials will be released soon.</p></footer>
+  <footer class="site-footer"><div><strong>TGCM and CAPTure</strong><p>Research on interleaved APT technique sequences and controlled audit-log evaluation.</p></div><p>Models, complete source code, and upstream extractor outputs will be released soon.</p></footer>
 </body>
 </html>
