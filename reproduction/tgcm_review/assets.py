@@ -24,6 +24,10 @@ def artifact_root(start: Path | None = None) -> Path:
     raise FileNotFoundError("Could not locate the TGCM reproduction-artifact root")
 
 
+# Compatibility name used by the paper-numbered experiment entry points.
+reviewer_root = artifact_root
+
+
 def _sha256(path: Path, chunk_size: int = 8 * 1024 * 1024) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
@@ -48,7 +52,9 @@ def _download_if_needed(part: dict, data_dir: Path) -> Path:
     if not url:
         if destination.exists():
             raise ValueError(f"Checksum mismatch for local asset part: {destination}")
-        raise FileNotFoundError(f"Missing asset part {destination}")
+        raise FileNotFoundError(
+            f"Missing asset part {destination}. Its public download URL has not been added yet."
+        )
     destination.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=destination.parent, delete=False) as tmp:
         temporary = Path(tmp.name)
