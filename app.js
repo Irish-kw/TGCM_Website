@@ -1,3 +1,8 @@
+const citationStylesheet = document.createElement('link');
+citationStylesheet.rel = 'stylesheet';
+citationStylesheet.href = 'citation.css';
+document.head.appendChild(citationStylesheet);
+
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('#site-nav');
 
