@@ -7,7 +7,9 @@
   <title>CAPTure Dataset Details | TGCM</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../subpage.css">
+  <link rel="stylesheet" href="details.css">
   <script defer src="../app.js"></script>
+  <script defer src="dataset.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -27,7 +29,7 @@
         <article class="summary-card"><span>Mix-5</span><strong>108,500,137</strong><p>events across 20 scenarios</p></article>
         <article class="summary-card"><span>Mix-6</span><strong>141,140,987</strong><p>events across 20 scenarios</p></article>
       </div>
-      <div class="table-block"><h2>Single-host Mix-2 to Mix-6</h2><div class="table-wrap"><table>
+      <div class="table-block"><h2>Single-host Mix-2 to Mix-6 summary</h2><div class="table-wrap"><table>
         <thead><tr><th>Subset</th><th>Scenarios</th><th>Total events</th><th>Size (GB)</th><th>Benign events</th><th>Malicious events</th><th>Malicious ratio (%)</th></tr></thead>
         <tbody>
           <tr><td>Mix-2</td><td>20</td><td>56,387,488</td><td>20.156</td><td>56,184,415</td><td>203,073</td><td>0.36</td></tr>
@@ -38,6 +40,16 @@
         </tbody>
         <tfoot><tr><th>Total</th><th>100</th><th>473,453,452</th><th>168.171</th><th>471,233,203</th><th>2,220,249</th><th>0.47</th></tr></tfoot>
       </table></div></div>
+
+      <h2 class="per-run-heading">Single-host per-run appendix statistics</h2>
+      <div class="per-run-groups">
+        <details><summary>Mix-2 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix2.csv" data-scope="single-host">Loading…</div></details>
+        <details><summary>Mix-3 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix3.csv" data-scope="single-host">Loading…</div></details>
+        <details><summary>Mix-4 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix4.csv" data-scope="single-host">Loading…</div></details>
+        <details><summary>Mix-5 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix5.csv" data-scope="single-host">Loading…</div></details>
+        <details><summary>Mix-6 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix6.csv" data-scope="single-host">Loading…</div></details>
+      </div>
+      <div class="per-run-downloads"><a href="runs/mix2.csv" download>Mix-2 CSV</a><a href="runs/mix3.csv" download>Mix-3 CSV</a><a href="runs/mix4.csv" download>Mix-4 CSV</a><a href="runs/mix5.csv" download>Mix-5 CSV</a><a href="runs/mix6.csv" download>Mix-6 CSV</a></div>
     </section>
 
     <section id="multi-host" class="dataset-section">
@@ -49,7 +61,7 @@
         <article class="summary-card"><span>Mix-5</span><strong>76,663,997</strong><p>events across 20 scenarios</p></article>
         <article class="summary-card"><span>Mix-6</span><strong>88,335,865</strong><p>events across 20 scenarios</p></article>
       </div>
-      <div class="table-block"><h2>Multi-host Mix-2 to Mix-6</h2><div class="table-wrap"><table>
+      <div class="table-block"><h2>Multi-host Mix-2 to Mix-6 summary</h2><div class="table-wrap"><table>
         <thead><tr><th>Subset</th><th>Scenarios</th><th>Total events</th><th>Size (GB)</th><th>Benign events</th><th>Malicious events</th><th>Malicious ratio (%)</th></tr></thead>
         <tbody>
           <tr><td>Mix-2</td><td>20</td><td>69,264,350</td><td>45.616</td><td>69,216,958</td><td>47,392</td><td>0.07</td></tr>
@@ -60,6 +72,15 @@
         </tbody>
         <tfoot><tr><th>Total</th><th>100</th><th>381,633,493</th><th>250.497</th><th>381,207,905</th><th>425,588</th><th>0.11</th></tr></tfoot>
       </table></div></div>
+
+      <h2 class="per-run-heading">Multi-host per-run appendix statistics</h2>
+      <div class="per-run-groups">
+        <details><summary>Mix-2 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix2.csv" data-scope="multi-host">Loading…</div></details>
+        <details><summary>Mix-3 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix3.csv" data-scope="multi-host">Loading…</div></details>
+        <details><summary>Mix-4 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix4.csv" data-scope="multi-host">Loading…</div></details>
+        <details><summary>Mix-5 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix5.csv" data-scope="multi-host">Loading…</div></details>
+        <details><summary>Mix-6 — 20 runs</summary><div class="per-run-table" data-run-table data-csv="runs/mix6.csv" data-scope="multi-host">Loading…</div></details>
+      </div>
       <div class="notice"><strong>Complete CSV download:</strong> the external URL for the full 499-file, 822.44 GiB extracted snapshot will be added to the main Downloads section.</div>
     </section>
   </main>
