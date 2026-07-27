@@ -1,0 +1,146 @@
+{
+  "format": "tgcm-reproduction-assets-v1",
+  "updated": "2026-07-27",
+  "assets": {
+    "synthetic_validation": {
+      "release_status": "coming-soon",
+      "archive_sha256": "21969826542d9bc117c54e38c91b2414e4b87479e4ae78109d33405d8f33d596",
+      "archive_bytes": 13402640,
+      "parts": [
+        {
+          "path": "assets/synthetic_validation.tar.xz",
+          "bytes": 13402640,
+          "sha256": "21969826542d9bc117c54e38c91b2414e4b87479e4ae78109d33405d8f33d596"
+        }
+      ],
+      "description": "Evaluation-only x/t/y_z arrays for K=2 through K=6.",
+      "members": 6
+    },
+    "capture_sequences": {
+      "release_status": "coming-soon",
+      "archive_sha256": "ad5d09be4ca799a83edad3f993891edd7a5a930657372b9a6490d8ab4191889b",
+      "archive_bytes": 28872,
+      "parts": [
+        {
+          "path": "assets/capture_sequences.tar.xz",
+          "bytes": 28872,
+          "sha256": "ad5d09be4ca799a83edad3f993891edd7a5a930657372b9a6490d8ab4191889b"
+        }
+      ],
+      "description": "CAPTure sequence-level evaluation inputs.",
+      "members": 2
+    },
+    "caldera_csv_full": {
+      "release_status": "external-download-url-pending",
+      "archive_sha256": "a03422cff58b4d412efdc5030bc356606a8973a478c89e2d6459517752708337",
+      "archive_bytes": 26266501260,
+      "extracted_bytes": 882870912778,
+      "parts": [],
+      "description": "Complete 499-file CALDERA-Procmon CSV snapshot. The external download URL will be added separately.",
+      "members": 500
+    },
+    "zero_shot_benchmarks": {
+      "release_status": "coming-soon",
+      "archive_sha256": "a24ed3021600b648e196a4d8671d2ea882b0d1051a1dbc54f5182ebb7f17e1d9",
+      "archive_bytes": 149588,
+      "parts": [
+        {
+          "path": "assets/zero_shot_benchmarks.tar.xz",
+          "bytes": 149588,
+          "sha256": "a24ed3021600b648e196a4d8671d2ea882b0d1051a1dbc54f5182ebb7f17e1d9"
+        }
+      ],
+      "description": "Data-only zero-shot benchmark inputs.",
+      "members": 3
+    },
+    "checkpoints_tgcm": {
+      "release_status": "coming-soon",
+      "archive_sha256": "b6773f1777a4268fe79978b2af61ad75bb37ab07c221bdbf3087896c7050fb75",
+      "archive_bytes": 54702472,
+      "parts": [
+        {
+          "path": "assets/checkpoints_tgcm.tar.xz.part-000",
+          "bytes": 47185920,
+          "sha256": "2533362cea8a9517ab8976819005cbad6f7ea6835c9a44e4bf2166f83ca63701"
+        },
+        {
+          "path": "assets/checkpoints_tgcm.tar.xz.part-001",
+          "bytes": 7516552,
+          "sha256": "96fc935054c8894e592eb3d895fb0bc813d2e0947a28c0ce706360f7402a86cf"
+        }
+      ],
+      "description": "TGCM inference weights for seven embedding families and five seeds.",
+      "members": 35
+    },
+    "checkpoints_neural_baselines": {
+      "release_status": "coming-soon",
+      "archive_sha256": "e5274ef26b3f790e865edb64d1c7d90cd3ee80358775827bff7d2afbd2a63263",
+      "archive_bytes": 91466172,
+      "parts": [
+        {
+          "path": "assets/checkpoints_neural_baselines.tar.xz",
+          "bytes": 91466172,
+          "sha256": "e5274ef26b3f790e865edb64d1c7d90cd3ee80358775827bff7d2afbd2a63263"
+        }
+      ],
+      "description": "DANet and MossFormer2 inference weights.",
+      "members": 50
+    },
+    "checkpoints_decompose": {
+      "release_status": "coming-soon",
+      "archive_sha256": "cc797c2de68c3992b3b1d63d88bb474e6931cf330f056f57e9ebba9d33c30879",
+      "archive_bytes": 56041492,
+      "parts": [
+        {
+          "path": "assets/checkpoints_decompose.tar.xz",
+          "bytes": 56041492,
+          "sha256": "cc797c2de68c3992b3b1d63d88bb474e6931cf330f056f57e9ebba9d33c30879"
+        }
+      ],
+      "description": "DECOMPOSE fitted states for K=2 through K=6 and five seeds.",
+      "members": 25
+    },
+    "figure04_llm_openai": {
+      "release_status": "coming-soon",
+      "archive_sha256": "8cb8c10c4596aa336b68e114f2e7d08b9a688b2995e81be62cf1a6e70b8252ca",
+      "archive_bytes": 70991896,
+      "parts": [
+        {
+          "path": "assets/figure04_llm_openai.tar.xz",
+          "bytes": 70991896,
+          "sha256": "8cb8c10c4596aa336b68e114f2e7d08b9a688b2995e81be62cf1a6e70b8252ca"
+        }
+      ],
+      "description": "Complete OpenAI response records for Figure 4.",
+      "members": 6
+    },
+    "figure04_llm_gemini": {
+      "release_status": "coming-soon",
+      "archive_sha256": "a2a258b9591537b9f7413db8cffc6de576732502cfd5f3d7c4055105e62e7c71",
+      "archive_bytes": 86152124,
+      "parts": [
+        {
+          "path": "assets/figure04_llm_gemini.tar.xz",
+          "bytes": 86152124,
+          "sha256": "a2a258b9591537b9f7413db8cffc6de576732502cfd5f3d7c4055105e62e7c71"
+        }
+      ],
+      "description": "Complete Gemini response records for Figure 4.",
+      "members": 6
+    },
+    "expected_outputs": {
+      "release_status": "coming-soon",
+      "archive_sha256": "0c8c4f2123e4d7b6870a778113ae98e623bdae6b21cd90e6c5b7b3349f9eb343",
+      "archive_bytes": 473716,
+      "parts": [
+        {
+          "path": "assets/expected_outputs.tar.xz",
+          "bytes": 473716,
+          "sha256": "0c8c4f2123e4d7b6870a778113ae98e623bdae6b21cd90e6c5b7b3349f9eb343"
+        }
+      ],
+      "description": "Post-run verification targets.",
+      "members": 17
+    }
+  }
+}
