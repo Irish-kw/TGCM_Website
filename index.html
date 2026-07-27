@@ -19,7 +19,7 @@
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="#overview">Overview</a>
+      <a href="#overview">Paper</a>
       <a href="#dataset">Dataset</a>
       <a href="#downloads">Downloads</a>
       <a href="#roadmap">Releases</a>
@@ -34,10 +34,10 @@
           <p class="eyebrow"><span class="status-dot"></span> Research website preview</p>
           <h1>TGCM</h1>
           <p class="hero-title">Topic-Guided Consistency Modeling for One-Step Disentanglement of Interleaved APT Technique Sequences</p>
-          <p class="hero-note">The current release focuses on the CAPTure dataset. TGCM models, source code, reproduction materials will be released soon.</p>
+          <p class="hero-note">The current release focuses on the CAPTure dataset. TGCM models, source code, and reproduction materials will be released soon.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#dataset">Explore CAPTure</a>
-            <a class="button button-secondary" href="release-manifest.json">Open manifest</a>
+            <a class="button button-primary" href="#overview">Read the paper overview</a>
+            <a class="button button-secondary" href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">View on arXiv</a>
           </div>
         </div>
 
@@ -67,14 +67,38 @@
 
     <section id="overview" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Project overview</p>
-        <h2>Disentangling interleaved APT technique sequences</h2>
-        <p>TGCM studies episode-level separation of mixed attack-technique sequences. The project combines topic guidance, consistency modeling, and fixed-budget decoding to recover individual intrusion episodes from interleaved observations.</p>
+        <p class="eyebrow">TGCM paper</p>
+        <h2>Recovering latent APT campaigns from interleaved technique sequences</h2>
+        <p>Enterprise audit logs may contain multiple APT campaigns unfolding at the same time. Their techniques become interleaved across actors, hosts, and execution stages, making it difficult to determine which techniques belong to the same underlying campaign.</p>
+        <p>TGCM formulates this setting as the <strong>Unknown-K Interleaved Sequence Demixing</strong> problem: jointly infer the number of latent campaigns and assign each observed technique to a coherent campaign sequence.</p>
+        <p><strong>Guo-Wei Wong, Ming-Chuan Yang, Shou-De Lin, Wang-Chien Lee, and MengChang Chen.</strong> Submitted to arXiv on June 17, 2026.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://arxiv.org/abs/2606.18651" target="_blank" rel="noopener">Read on arXiv</a>
+          <a href="https://arxiv.org/pdf/2606.18651" target="_blank" rel="noopener">Download PDF</a>
+        </div>
       </div>
+
       <div class="feature-grid">
-        <article><span>01</span><h3>Mixed intrusions</h3><p>Designed for sequences containing multiple concurrent or interleaved attack episodes.</p></article>
-        <article><span>02</span><h3>Unknown episode count</h3><p>Evaluation includes settings where the true number of attack episodes is not provided at inference time.</p></article>
-        <article><span>03</span><h3>End-to-end evaluation</h3><p>CAPTure connects audit-log collection, upstream extraction, sequence disentanglement, and reproducible evaluation.</p></article>
+        <article>
+          <span>01</span>
+          <h3>Unknown-K demixing</h3>
+          <p>TGCM recovers multiple latent campaign sequences while simultaneously estimating how many campaigns are present, rather than assuming that the episode count is known in advance.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>One-step generation</h3>
+          <p>A consistency-model-based generator learns a direct inverse mapping from an interleaved observation to separated campaign sequences in a single inference step.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Topic-guided coherence</h3>
+          <p>A topic prior derived from MITRE ATT&amp;CK narratives provides high-level tactical guidance, encouraging each recovered sequence to form a semantically coherent attack chain.</p>
+        </article>
+      </div>
+
+      <div class="integrity-callout">
+        <div><span>Evaluation</span><h3>Designed for heavy interleaving and shared techniques.</h3></div>
+        <p>The paper evaluates TGCM on synthetic and established mixed-sequence datasets, DARPA TC-E3 and TC-E5 traces, and 15 representative baselines spanning statistical, deep-learning, and LLM-based methods. It also reports zero-shot evaluation on naturally interleaved DARPA TC-E5 data without retraining.</p>
       </div>
     </section>
 
