@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TGCM and CAPTure: a research project and controlled CALDERA–Procmon audit-log dataset for mixed-intrusion analysis.">
+  <meta name="theme-color" content="#07111f">
+  <title>TGCM | CAPTure Dataset</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="TGCM home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>TGCM</strong><small>CAPTure Dataset</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#roadmap">Releases</a>
+      <a href="#citation">Citation</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Research website preview</p>
+          <h1>TGCM</h1>
+          <p class="hero-title">Topic-Guided Consistency Modeling for One-Step Disentanglement of Interleaved APT Technique Sequences</p>
+          <p class="hero-note">The current release focuses on the CAPTure dataset. TGCM models, source code, reproduction materials, and SFM, Zoomer, and TREC outputs will be released soon.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#dataset">Explore CAPTure</a>
+            <a class="button button-secondary" href="release-manifest.json">Open manifest</a>
+          </div>
+        </div>
+
+        <div class="graph-panel" aria-label="Illustration of interleaved attack streams">
+          <div class="graph-label">Interleaved intrusion view</div>
+          <svg viewBox="0 0 620 390" role="img" aria-labelledby="graph-title graph-desc">
+            <title id="graph-title">Interleaved attack event graph</title>
+            <desc id="graph-desc">Three event paths cross hosts and form a mixed intrusion sequence.</desc>
+            <defs>
+              <linearGradient id="edge-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#67e8f9"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+              <linearGradient id="edge-b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#818cf8"/></linearGradient>
+              <linearGradient id="edge-c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient>
+            </defs>
+            <g class="host-lines"><line x1="65" y1="90" x2="555" y2="90"/><line x1="65" y1="195" x2="555" y2="195"/><line x1="65" y1="300" x2="555" y2="300"/></g>
+            <g class="edge edge-a"><path d="M90,90 C160,90 180,195 250,195 S350,90 420,90 S500,195 545,195"/></g>
+            <g class="edge edge-b"><path d="M90,300 C165,300 180,195 250,195 S350,300 420,300 S480,195 545,195"/></g>
+            <g class="edge edge-c"><path d="M90,195 C165,195 185,90 250,90 S350,195 420,195 S490,300 545,300"/></g>
+            <g class="nodes path-a"><circle cx="90" cy="90" r="11"/><circle cx="250" cy="195" r="11"/><circle cx="420" cy="90" r="11"/><circle cx="545" cy="195" r="11"/></g>
+            <g class="nodes path-b"><circle cx="90" cy="300" r="11"/><circle cx="250" cy="195" r="7"/><circle cx="420" cy="300" r="11"/><circle cx="545" cy="195" r="7"/></g>
+            <g class="nodes path-c"><circle cx="90" cy="195" r="11"/><circle cx="250" cy="90" r="11"/><circle cx="420" cy="195" r="11"/><circle cx="545" cy="300" r="11"/></g>
+            <g class="host-labels"><text x="68" y="70">Host A</text><text x="68" y="175">Host B</text><text x="68" y="280">Host C</text></g>
+          </svg>
+          <div class="graph-legend"><span><i class="legend-a"></i> Stream A</span><span><i class="legend-b"></i> Stream B</span><span><i class="legend-c"></i> Stream C</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Project overview</p>
+        <h2>Disentangling interleaved APT technique sequences</h2>
+        <p>TGCM studies episode-level separation of mixed attack-technique sequences. The project combines topic guidance, consistency modeling, and fixed-budget decoding to recover individual intrusion episodes from interleaved observations.</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>Mixed intrusions</h3><p>Designed for sequences containing multiple concurrent or interleaved attack episodes.</p></article>
+        <article><span>02</span><h3>Unknown episode count</h3><p>Evaluation includes settings where the true number of attack episodes is not provided at inference time.</p></article>
+        <article><span>03</span><h3>End-to-end evaluation</h3><p>CAPTure connects audit-log collection, upstream extraction, sequence disentanglement, and reproducible evaluation.</p></article>
+      </div>
+    </section>
+
+    <section id="dataset" class="section section-dark">
+      <div class="section-heading">
+        <p class="eyebrow">CAPTure dataset</p>
+        <h2>Controlled CALDERA–Procmon audit data</h2>
+        <p>CAPTure contains controlled adversary-emulation scenarios with high-volume Windows audit collection. It covers single-host and multi-host settings and supports research on event extraction, technique sequencing, mixed-intrusion analysis, and episode disentanglement.</p>
+      </div>
+      <div class="stats-grid">
+        <article><strong>200</strong><span>emulation scenarios</span></article>
+        <article><strong>855M</strong><span>total audit events</span></article>
+        <article><strong>852.4M</strong><span>benign events</span></article>
+        <article><strong>2.65M</strong><span>malicious events</span></article>
+        <article><strong>499</strong><span>source CSV files</span></article>
+        <article><strong>25</strong><span>APT and ransomware profiles</span></article>
+      </div>
+      <div class="pipeline" role="list" aria-label="CAPTure data layers">
+        <article role="listitem"><span>Layer 1</span><h3>CALDERA scenarios</h3><p>Controlled attack profiles, scenario configurations, and ground-truth context.</p></article>
+        <div class="pipeline-arrow" aria-hidden="true">→</div>
+        <article role="listitem"><span>Layer 2</span><h3>Procmon events</h3><p>Windows audit records collected in single-host and multi-host environments.</p></article>
+        <div class="pipeline-arrow" aria-hidden="true">→</div>
+        <article role="listitem"><span>Layer 3</span><h3>Sequence inputs</h3><p>Compact records used for mixed-episode evaluation across upstream extractors.</p></article>
+      </div>
+    </section>
+
+    <section id="downloads" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Downloads</p>
+        <h2>Release status</h2>
+        <p>The website and integrity manifest are available first. CAPTure dataset downloads will be added here as each release package is ready.</p>
+      </div>
+      <div class="download-grid">
+        <article class="download-card available"><div class="download-status">Available</div><h3>Release manifest</h3><p>Machine-readable dataset scope, archive sizes, checksums, and release status.</p><dl><div><dt>Format</dt><dd>JSON</dd></div><div><dt>Access</dt><dd>Public</dd></div></dl><a class="button button-primary" href="release-manifest.json" download>Download manifest</a></article>
+        <article class="download-card"><div class="download-status">Coming soon</div><h3>CAPTure evaluation sequences</h3><p>Compact sequence-level inputs for CAPTure evaluation.</p><dl><div><dt>Archive</dt><dd>28,872 bytes</dd></div><div><dt>Integrity</dt><dd>SHA-256 recorded</dd></div></dl><button class="button button-disabled" type="button" disabled>Download coming soon</button></article>
+        <article class="download-card"><div class="download-status">Coming soon</div><h3>Full CALDERA–Procmon snapshot</h3><p>Complete 499-file audit-log provenance snapshot.</p><dl><div><dt>Compressed</dt><dd>26.27 GB</dd></div><div><dt>Extracted</dt><dd>822.44 GiB</dd></div></dl><button class="button button-disabled" type="button" disabled>Download coming soon</button></article>
+      </div>
+      <div class="integrity-callout"><div><span>Integrity</span><h3>Every released artifact will be checksum verified.</h3></div><p>The release manifest records archive hashes, split-part metadata, source-file counts, and extraction requirements.</p></div>
+    </section>
+
+    <section id="roadmap" class="section section-roadmap">
+      <div class="section-heading">
+        <p class="eyebrow">Upcoming releases</p>
+        <h2>More materials will be released soon</h2>
+        <p>The website structure already reserves sections for the complete TGCM research artifact.</p>
+      </div>
+      <div class="roadmap-grid">
+        <article><span>Coming soon</span><h3>SFM outputs</h3><p>Processed CAPTure inputs and extraction metadata produced by SFM.</p></article>
+        <article><span>Coming soon</span><h3>Zoomer outputs</h3><p>Processed CAPTure inputs and extraction metadata produced by Zoomer.</p></article>
+        <article><span>Coming soon</span><h3>TREC outputs</h3><p>Processed CAPTure inputs and extraction metadata produced by TREC.</p></article>
+        <article><span>Coming soon</span><h3>Reproduction</h3><p>Environment definitions, notebooks, expected outputs, and verification instructions.</p></article>
+        <article><span>Coming soon</span><h3>TGCM models</h3><p>Model checkpoints and documented interfaces for research evaluation.</p></article>
+        <article><span>Coming soon</span><h3>Source code</h3><p>TGCM inference, evaluation, and supporting implementation.</p></article>
+      </div>
+    </section>
+
+    <section id="citation" class="section section-citation">
+      <div class="citation-card">
+        <div><p class="eyebrow">Citation and license</p><h2>Publication metadata is being finalized</h2><p>The formal citation, DOI, license, and BibTeX entry will be added with the public dataset release.</p></div>
+        <div class="citation-meta"><div><span>Dataset</span><strong>CAPTure</strong></div><div><span>Project</span><strong>TGCM</strong></div><div><span>Status</span><strong>Website preview</strong></div><div><span>Updated</span><strong>July 27, 2026</strong></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>TGCM and CAPTure</strong><p>Research on interleaved APT technique sequences and controlled audit-log evaluation.</p></div><p>Additional datasets, models, code, and reproduction materials will be released soon.</p></footer>
+</body>
+</html>
