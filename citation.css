@@ -1,0 +1,66 @@
+.citation-card-wide {
+  grid-template-columns: minmax(260px, .65fr) minmax(0, 1.35fr);
+  align-items: start;
+}
+
+.citation-heading a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #087da0;
+  font-weight: 750;
+  text-underline-offset: 4px;
+}
+
+.bibtex-panel {
+  position: relative;
+  min-width: 0;
+}
+
+.bibtex-panel pre {
+  margin: 0;
+  padding: 58px 24px 24px;
+  overflow-x: auto;
+  border: 1px solid #263b50;
+  border-radius: 16px;
+  color: #d8e8f7;
+  background: #07111f;
+  font: 0.84rem/1.65 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  white-space: pre;
+}
+
+.copy-button {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(103, 232, 249, .3);
+  border-radius: 8px;
+  color: #bdf5ff;
+  background: rgba(103, 232, 249, .08);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+  border-color: rgba(103, 232, 249, .65);
+  background: rgba(103, 232, 249, .14);
+  outline: none;
+}
+
+@media (max-width: 980px) {
+  .citation-card-wide {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .bibtex-panel pre {
+    padding: 54px 18px 20px;
+    font-size: .76rem;
+  }
+}
