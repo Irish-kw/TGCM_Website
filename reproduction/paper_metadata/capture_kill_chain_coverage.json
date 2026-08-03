@@ -1,0 +1,16 @@
+{
+  "source": "CAPTure profile-level mapping summarized in the paper appendix",
+  "dataset": "CAPTure",
+  "coverage": {
+    "Initial Access": 8,
+    "Execution": 28,
+    "Persistence": 24,
+    "Defense Evasion": 14,
+    "Credential Access": 0,
+    "Discovery": 58,
+    "Lateral Movement": 11,
+    "Collection": 17,
+    "C2": 13,
+    "Exfiltration": 1
+  }
+}
