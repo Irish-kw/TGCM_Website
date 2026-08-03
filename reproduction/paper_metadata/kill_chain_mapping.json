@@ -6,6 +6,7 @@
     "Defense Evasion": ["T1497.001", "T1055.001", "T1562.001"],
     "Credential Access": [],
     "Discovery": ["T1016"],
+    "Lateral Movement": [],
     "Collection": [],
     "C2": ["T1071.001", "T1090.001"],
     "Exfiltration": []
@@ -17,6 +18,7 @@
     "Defense Evasion": [],
     "Credential Access": [],
     "Discovery": ["T1482", "T1083", "T1057", "T1018", "T1082", "T1124", "T1033", "T1016", "T1049"],
+    "Lateral Movement": [],
     "Collection": ["T1119"],
     "C2": ["T1105"],
     "Exfiltration": []
@@ -28,6 +30,7 @@
     "Defense Evasion": [],
     "Credential Access": ["T1003"],
     "Discovery": ["T1087.001"],
+    "Lateral Movement": [],
     "Collection": [],
     "C2": ["T1105"],
     "Exfiltration": []
@@ -39,6 +42,7 @@
     "Defense Evasion": ["T1089"],
     "Credential Access": ["T1003.008", "T1555.003"],
     "Discovery": ["T1057", "T1082", "T1016", "T1033", "T1049", "T1007", "T1135", "T1018", "T1046"],
+    "Lateral Movement": [],
     "Collection": ["T1005"],
     "C2": ["T1105", "T1071", "T1071.001"],
     "Exfiltration": ["T1041"]
@@ -50,6 +54,7 @@
     "Defense Evasion": ["T1055.001", "T1070.004", "T1055"],
     "Credential Access": ["T1003.001", "T1003.008"],
     "Discovery": ["T1083", "T1033", "T1057", "T1082", "T1049", "T1046", "T1016", "T1007", "T1087"],
+    "Lateral Movement": [],
     "Collection": ["T1074", "T1005"],
     "C2": ["T1071.001", "T1071", "T1071.004", "T1105"],
     "Exfiltration": ["T1048", "T1041"]
