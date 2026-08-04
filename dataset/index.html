@@ -21,7 +21,7 @@
     <section class="subpage-hero"><div><p class="eyebrow">CAPTure dataset</p><h1>Single-host and multi-host corpus details</h1><p>CAPTure contains 200 controlled CALDERA–Procmon scenarios: 100 single-host and 100 multi-host runs. Each setting contains 20 scenarios at Mix-2, Mix-3, Mix-4, Mix-5, and Mix-6.</p><div class="hero-actions"><a class="button button-primary" href="#single-host">Single-host</a><a class="button button-secondary" href="#multi-host">Multi-host</a></div></div></section>
 
     <section id="single-host" class="dataset-section">
-      <div class="page-heading"><p class="eyebrow">100 scenarios</p><h1>Single-host setting</h1><p>Multiple attack profiles execute concurrently on one Windows host while Procmon records the complete event stream.</p></div>
+      <div class="page-heading"><p class="eyebrow">100 scenarios</p><h1>Single-host setting</h1><p>Multiple attack profiles execute concurrently on one Windows host while Procmon records the complete event stream.</p><p>CAPTure preserves the telemetry produced by the observed execution rather than assuming that every emulated action completes successfully. Some traces may therefore contain attempted, blocked, interrupted, or partially executed behaviors due to endpoint protections such as Microsoft Defender, operating-system policy, or other runtime conditions. These records are retained as part of the execution outcome and should not be interpreted as evidence that every scheduled technique completed successfully.</p></div>
       <div class="summary-grid">
         <article class="summary-card"><span>Mix-2</span><strong>56,387,488</strong><p>events across 20 scenarios</p></article>
         <article class="summary-card"><span>Mix-3</span><strong>74,132,852</strong><p>events across 20 scenarios</p></article>
@@ -52,7 +52,7 @@
     </section>
 
     <section id="multi-host" class="dataset-section">
-      <div class="page-heading"><p class="eyebrow">100 scenarios</p><h1>Multi-host setting</h1><p>Participating Windows VM traces are collected separately and merged by recorded timestamps to represent coarse technique-level temporal order across hosts.</p></div>
+      <div class="page-heading"><p class="eyebrow">100 scenarios</p><h1>Multi-host setting</h1><p>Participating Windows VM traces are collected separately and merged by recorded timestamps to represent coarse technique-level temporal order across hosts.</p><p>CAPTure preserves the telemetry produced by the observed execution rather than assuming that every emulated action completes successfully. Some traces may therefore contain attempted, blocked, interrupted, or partially executed behaviors due to endpoint protections such as Microsoft Defender, operating-system policy, or other runtime conditions. These records are retained as part of the execution outcome and should not be interpreted as evidence that every scheduled technique completed successfully.</p></div>
       <div class="summary-grid">
         <article class="summary-card"><span>Mix-2</span><strong>69,264,350</strong><p>events across 20 scenarios</p></article>
         <article class="summary-card"><span>Mix-3</span><strong>72,763,238</strong><p>events across 20 scenarios</p></article>
